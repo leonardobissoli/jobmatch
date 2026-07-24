@@ -43,6 +43,29 @@ class TestCleanStr:
         assert _clean_str(42) == 42
         assert _clean_str(None) is None
 
+    def test_does_not_leak_bleach_escaping_into_the_report(self) -> None:
+        # bleach escapes what it keeps; without decoding, the report showed
+        # "Web Platform &amp; Technology" to the user.
+        assert (
+            _clean_str("Director, Web Platform & Technology · MongoDB", max_len=200)
+            == "Director, Web Platform & Technology · MongoDB"
+        )
+        assert _clean_str("AT&T, R&D e P&L", max_len=100) == "AT&T, R&D e P&L"
+        assert _clean_str("salário < 5000 > 3000", max_len=100) == "salário < 5000 > 3000"
+
+    def test_still_strips_markup_after_decoding(self) -> None:
+        assert _clean_str("<img src=x onerror=alert(1)>texto", max_len=100) == "texto"
+        # Pre-escaped markup unwinds one level only, so it stays inert text.
+        assert _clean_str("&amp;lt;script&amp;gt;", max_len=100) == "&lt;script&gt;"
+
+    def test_truncation_counts_decoded_characters(self) -> None:
+        # rstrip() before the ellipsis can shave a trailing space, so the cap is
+        # an upper bound rather than an exact length.
+        out = _clean_str("A & B" * 100, max_len=50)
+        assert len(out) <= 50
+        assert out.endswith("…")
+        assert "&amp;" not in out
+
 
 class TestSanitizeMatchPayload:
     def test_runaway_action_plan_truncated(self) -> None:

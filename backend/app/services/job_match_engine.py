@@ -11,6 +11,7 @@ from app.i18n import DEFAULT_LOCALE, t
 from app.schemas.match import MatchResult, ResumeLength, ResumeLengthStatus, score_to_tier
 from app.services.injection_guard import find_suspicious_patterns
 from app.services.minimax_client import MinimaxClient, MinimaxError, get_minimax
+from app.services.security import decode_html_entities
 
 _WORD_RE = re.compile(r"\S+")
 _RESUME_TOO_SHORT = 300
@@ -51,7 +52,13 @@ class LLMUnavailableError(Exception):
 def _clean_str(value: Any, max_len: int | None = None) -> Any:
     if not isinstance(value, str):
         return value
-    cleaned = bleach.clean(value, tags=[], attributes={}, strip=True)
+    # bleach.clean() strips tags but also escapes the text it keeps, so a job
+    # title like "Web Platform & Technology" came back as "&amp;" and the report
+    # rendered the entity verbatim. Decoding undoes exactly that escaping: any
+    # markup bleach removed is already gone, and anything the model had written
+    # pre-escaped ("&lt;script&gt;") only unwinds one level, so it stays inert
+    # text rather than becoming a tag. Frontend rendering escapes again anyway.
+    cleaned = decode_html_entities(bleach.clean(value, tags=[], attributes={}, strip=True))
     if max_len is not None and len(cleaned) > max_len:
         return cleaned[: max_len - 1].rstrip() + "…"
     return cleaned
