@@ -37,6 +37,7 @@ backend/*.egg-info
 
 # Documentation is not needed at runtime.
 *.md
+docs
 
 # Local data / runtime
 data

@@ -4,6 +4,8 @@ Compare um CV em PDF com uma descrição de vaga e receba score de 0 a 100, aná
 
 Esta edição foi preparada exclusivamente para execução local. Ela não captura e-mail, não mantém banco de dados, não armazena CVs ou relatórios e não contém configuração de deploy.
 
+![Relatório de aderência do Job Match: score 81, breakdown em seis dimensões e comparação entre o cargo do CV e o da vaga, analisado localmente com Ollama.](docs/screenshot.png)
+
 ## Requisitos
 
 - Docker com Docker Compose v2
