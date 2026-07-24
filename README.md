@@ -1,4 +1,4 @@
-# Job Match — execução local
+# Job Match (execução local)
 
 Compare um CV em PDF com uma descrição de vaga e receba score de 0 a 100, análise em seis dimensões, gaps priorizados e plano de ação.
 
