@@ -1,0 +1,42 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      MINIMAX_API_KEY: ${MINIMAX_API_KEY:-}
+      MINIMAX_BASE_URL: ${MINIMAX_BASE_URL:-https://api.minimax.io/v1}
+      MINIMAX_MODEL: ${MINIMAX_MODEL:-MiniMax-M2.7}
+      MINIMAX_TIMEOUT_SECONDS: ${MINIMAX_TIMEOUT_SECONDS:-180}
+      LOCAL_LLM_ENABLED: "true"
+      LOCAL_LLM_TIMEOUT_SECONDS: ${LOCAL_LLM_TIMEOUT_SECONDS:-300}
+      LOCAL_LLM_HOST: host.docker.internal
+      CORS_ALLOWED_ORIGINS: http://localhost:3000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8001:8001"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+    security_opt:
+      - no-new-privileges:true
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    environment:
+      NODE_ENV: production
+      INTERNAL_BACKEND_URL: http://backend:8001
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+      - /app/.next/cache:size=128m
+    security_opt:
+      - no-new-privileges:true

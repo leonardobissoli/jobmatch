@@ -1,0 +1,46 @@
+# Applied to the frontend build. The backend service has its own build context.
+
+.git
+.github
+.gitignore
+
+# Editor / OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Environment files (must never enter image)
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+
+# Frontend build/dep artifacts
+frontend/node_modules
+frontend/.next
+frontend/.turbo
+
+# Backend (not consumed by the frontend image)
+backend/.venv
+backend/__pycache__
+backend/**/__pycache__
+backend/.pytest_cache
+backend/.ruff_cache
+backend/.mypy_cache
+backend/htmlcov
+backend/.coverage
+backend/dist
+backend/build
+backend/*.egg-info
+
+# Documentation is not needed at runtime.
+*.md
+
+# Local data / runtime
+data
+*.db
+*.sqlite
+*.sqlite3
+*.log

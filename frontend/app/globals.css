@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #0a0a0f;
+  color: #e5e7eb;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(168, 85, 247, 0.12), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.08), transparent 45%);
+  background-attachment: fixed;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.5);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+input[type="file"]::file-selector-button {
+  display: none;
+}

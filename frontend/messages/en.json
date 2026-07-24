@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "Job Match",
+    "brandOwner": "Leonardo Bissoli — Tech Hub",
+    "tagline": "Tech Hub · Job Match",
+    "back": "← Back"
+  },
+  "landing": {
+    "heroTitle": "How well does your CV match",
+    "heroTitleHighlight": "this job",
+    "heroTitleSuffix": "?",
+    "heroSubtitle": "Get a fit analysis in under 5 minutes. Score 0–100, breakdown across 6 dimensions, prioritized gaps, and an action plan.",
+    "footerPrivacy": "Privacy policy",
+    "footerTerms": "Terms of use",
+    "serverError": "Invalid response from server."
+  },
+  "form": {
+    "cvLabel": "Your CV (PDF, up to 5MB)",
+    "cvDropHint": "Drag here or click to select",
+    "jobLabel": "Job description",
+    "jobDropHint": "Drag the .txt here or click to select (up to 100KB)",
+    "jobTabFile": "Upload TXT",
+    "jobTabText": "Paste text",
+    "jobPlaceholder": "Paste the full job description here (requirements, responsibilities, benefits)...",
+    "jobMinChars": "minimum 50 characters",
+    "marketLabel": "Target market",
+    "marketOptional": "(optional)",
+    "marketHelp": "Adapts recommendations to the format expected in the market (photo, length, dates).",
+    "submit": "Analyze fit",
+    "progress": "{seconds}s elapsed",
+    "progressHint": "analysis usually takes 30–190s",
+    "errors": {
+      "pdfTooLarge": "PDF above the limit. CV must be at most 5MB (your file is {size}MB).",
+      "txtTooLarge": "Job description above the limit. Maximum 100KB (you sent {kb}KB).",
+      "generic": "Couldn't process the analysis. Please try again.",
+      "network": "Network failure. Check your connection and try again."
+    },
+    "loadingMessages": [
+      "Reading your CV...",
+      "Analyzing the job...",
+      "Comparing experience...",
+      "Calculating the score...",
+      "Building the action plan..."
+    ]
+  },
+  "report": {
+    "scoreMax": "/ 100",
+    "jobAnalyzed": "Job analyzed",
+    "candidateLabel": "Candidate: {name}",
+    "breakdownTitle": "Breakdown by dimension",
+    "matchStrengths": "Match strengths",
+    "gaps": "Gaps",
+    "actionPlan": "Action plan",
+    "newAnalysis": "← New analysis",
+    "matchId": "id: {id}",
+    "jobTitleCard": {
+      "title": "Role: CV × job",
+      "aligned": "🟢 Aligned",
+      "misaligned": "🟡 Misaligned",
+      "currentCv": "Current role in CV",
+      "targetJob": "Target role",
+      "notIdentified": "Not identified"
+    },
+    "standardHeadings": {
+      "title": "CV sections",
+      "present": "🟢 Present ({count})",
+      "missing": "🟡 Missing ({count})",
+      "noneFound": "No canonical section identified.",
+      "noneMissing": "No canonical section missing."
+    },
+    "dateFormatting": {
+      "title": "Date formatting",
+      "consistent": "🟢 Consistent",
+      "inconsistent": "🟡 Inconsistent",
+      "okMessage": "The dates in the CV follow a consistent format."
+    },
+    "resumeLength": {
+      "title": "Resume length",
+      "wordCount": "{count, plural, one {# word} other {# words}}",
+      "pageCount": "≈ {count, plural, one {# page} other {# pages}}"
+    },
+    "actionItem": {
+      "effort": "💪 effort: {level}",
+      "scoreImpact": "+{pts} pts"
+    },
+    "gap": {
+      "howToClose": "How to close:"
+    },
+    "downloadPdf": "Download PDF",
+    "pdfGenerating": "Generating PDF...",
+    "pdfError": "Error generating PDF. Please try again."
+  },
+  "dimensions": {
+    "hard_skills": "Hard Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "languages": "Languages",
+    "soft_skills": "Soft Skills",
+    "location": "Location"
+  },
+  "criticality": {
+    "blocking": "🔴 Blocking",
+    "important": "🟡 Important",
+    "nice_to_have": "🟢 Nice to have"
+  },
+  "effort": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "resumeLengthStatus": {
+    "too_short": "🟡 Short",
+    "ideal": "🟢 Ideal",
+    "too_long": "🟡 Long"
+  },
+  "targetMarket": {
+    "NONE": "Not specified",
+    "BR": "Brazil",
+    "PT": "Portugal",
+    "UK": "United Kingdom / Ireland",
+    "EU": "Europe (other)",
+    "US": "United States / Canada"
+  },
+  "metadata": {
+    "title": "Job Match — Tech Hub",
+    "description": "Get a fit analysis in under 5 minutes. Score 0–100, breakdown across 6 dimensions, prioritized gaps, and an action plan.",
+    "ogDescription": "Get a fit analysis in under 5 minutes. Score 0–100 between your CV and the job, with an action plan."
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "pt-BR": "🇧🇷 Português (BR)",
+    "en": "🇺🇸 English (US)"
+  },
+  "modelSwitcher": {
+    "label": "Model",
+    "minimax": "MiniMax (cloud)",
+    "local": "Run local",
+    "panelTitle": "Local model",
+    "panelHelp": "Ollama or LM Studio must be running on the same machine as the backend.",
+    "providerLabel": "Provider",
+    "ollama": "Ollama",
+    "lmstudio": "LM Studio",
+    "baseUrlLabel": "Address",
+    "modelLabel": "Model",
+    "test": "Test connection",
+    "testing": "Testing...",
+    "connected": "✅ Connected. {count} model(s) found.",
+    "failed": "❌ {message}",
+    "genericFailure": "Could not reach the local server.",
+    "selectModelPlaceholder": "Test the connection to list models",
+    "warning": "The analysis runs on your machine. It may take several minutes."
+  }
+}

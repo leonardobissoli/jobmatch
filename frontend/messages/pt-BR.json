@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "Job Match",
+    "brandOwner": "Leonardo Bissoli — Tech Hub",
+    "tagline": "Tech Hub · Job Match",
+    "back": "← Voltar"
+  },
+  "landing": {
+    "heroTitle": "O quanto seu CV combina",
+    "heroTitleHighlight": "com essa vaga",
+    "heroTitleSuffix": "?",
+    "heroSubtitle": "Análise da sua aderência em menos de 5 minutos. Score 0-100, breakdown em 6 dimensões, gaps priorizados e plano de ação.",
+    "footerPrivacy": "Política de privacidade",
+    "footerTerms": "Termos de uso",
+    "serverError": "Resposta inválida do servidor."
+  },
+  "form": {
+    "cvLabel": "Seu CV (PDF, até 5MB)",
+    "cvDropHint": "Arraste aqui ou clique para selecionar",
+    "jobLabel": "Descrição da vaga",
+    "jobDropHint": "Arraste o .txt aqui ou clique para selecionar (até 100KB)",
+    "jobTabFile": "Upload TXT",
+    "jobTabText": "Colar texto",
+    "jobPlaceholder": "Cole aqui a descrição completa da vaga (requisitos, responsabilidades, benefícios)...",
+    "jobMinChars": "mínimo 50 caracteres",
+    "marketLabel": "Mercado-alvo",
+    "marketOptional": "(opcional)",
+    "marketHelp": "Adapta as recomendações ao formato esperado no mercado (foto, páginas, datas).",
+    "submit": "Analisar aderência",
+    "progress": "{seconds}s decorridos",
+    "progressHint": "análise costuma levar 30-190s",
+    "errors": {
+      "pdfTooLarge": "PDF acima do limite. O CV deve ter no máximo 5MB (seu arquivo tem {size}MB).",
+      "txtTooLarge": "Descrição da vaga acima do limite. Máximo 100KB (você enviou {kb}KB).",
+      "generic": "Erro ao processar a análise. Tente novamente.",
+      "network": "Falha de rede. Verifique sua conexão e tente novamente."
+    },
+    "loadingMessages": [
+      "Lendo seu CV...",
+      "Analisando a vaga...",
+      "Comparando experiência...",
+      "Calculando o score...",
+      "Montando o plano de ação..."
+    ]
+  },
+  "report": {
+    "scoreMax": "/ 100",
+    "jobAnalyzed": "Vaga analisada",
+    "candidateLabel": "Candidato: {name}",
+    "breakdownTitle": "Breakdown por dimensão",
+    "matchStrengths": "Pontos fortes",
+    "gaps": "Lacunas",
+    "actionPlan": "Plano de ação",
+    "newAnalysis": "← Nova análise",
+    "matchId": "id: {id}",
+    "jobTitleCard": {
+      "title": "Cargo: CV × vaga",
+      "aligned": "🟢 Alinhado",
+      "misaligned": "🟡 Desalinhado",
+      "currentCv": "Cargo atual no CV",
+      "targetJob": "Cargo da vaga",
+      "notIdentified": "Não identificado"
+    },
+    "standardHeadings": {
+      "title": "Seções do CV",
+      "present": "🟢 Presentes ({count})",
+      "missing": "🟡 Ausentes ({count})",
+      "noneFound": "Nenhuma seção canônica identificada.",
+      "noneMissing": "Nenhuma seção canônica faltando."
+    },
+    "dateFormatting": {
+      "title": "Formatação de datas",
+      "consistent": "🟢 Consistente",
+      "inconsistent": "🟡 Inconsistente",
+      "okMessage": "As datas do CV seguem um formato consistente."
+    },
+    "resumeLength": {
+      "title": "Tamanho do CV",
+      "wordCount": "{count, plural, one {# palavra} other {# palavras}}",
+      "pageCount": "≈ {count, plural, one {# página} other {# páginas}}"
+    },
+    "actionItem": {
+      "effort": "💪 esforço: {level}",
+      "scoreImpact": "+{pts} pts"
+    },
+    "gap": {
+      "howToClose": "Como fechar:"
+    },
+    "downloadPdf": "Baixar PDF",
+    "pdfGenerating": "Gerando PDF...",
+    "pdfError": "Erro ao gerar o PDF. Tente novamente."
+  },
+  "dimensions": {
+    "hard_skills": "Hard Skills",
+    "experience": "Experiência",
+    "education": "Educação",
+    "languages": "Idiomas",
+    "soft_skills": "Soft Skills",
+    "location": "Localização"
+  },
+  "criticality": {
+    "blocking": "🔴 Bloqueante",
+    "important": "🟡 Importante",
+    "nice_to_have": "🟢 Nice to have"
+  },
+  "effort": {
+    "low": "Baixo",
+    "medium": "Médio",
+    "high": "Alto"
+  },
+  "resumeLengthStatus": {
+    "too_short": "🟡 Curto",
+    "ideal": "🟢 Ideal",
+    "too_long": "🟡 Longo"
+  },
+  "targetMarket": {
+    "NONE": "Não especificado",
+    "BR": "Brasil",
+    "PT": "Portugal",
+    "UK": "Reino Unido / Irlanda",
+    "EU": "Europa (outros)",
+    "US": "EUA / Canadá"
+  },
+  "metadata": {
+    "title": "Job Match — Tech Hub",
+    "description": "Análise da sua aderência em menos de 5 minutos. Score 0-100, breakdown em 6 dimensões, gaps priorizados e plano de ação.",
+    "ogDescription": "Análise da sua aderência em menos de 5 minutos. Score 0-100 entre CV e vaga, com plano de ação."
+  },
+  "localeSwitcher": {
+    "label": "Idioma",
+    "pt-BR": "🇧🇷 Português (BR)",
+    "en": "🇺🇸 English (US)"
+  },
+  "modelSwitcher": {
+    "label": "Modelo",
+    "minimax": "MiniMax (nuvem)",
+    "local": "Rodar local",
+    "panelTitle": "Modelo local",
+    "panelHelp": "O Ollama ou o LM Studio precisa estar rodando na mesma máquina do backend.",
+    "providerLabel": "Provedor",
+    "ollama": "Ollama",
+    "lmstudio": "LM Studio",
+    "baseUrlLabel": "Endereço",
+    "modelLabel": "Modelo",
+    "test": "Testar conexão",
+    "testing": "Testando...",
+    "connected": "✅ Conectado. {count} modelo(s) encontrado(s).",
+    "failed": "❌ {message}",
+    "genericFailure": "Não conseguimos falar com o servidor local.",
+    "selectModelPlaceholder": "Teste a conexão para listar os modelos",
+    "warning": "A análise roda na sua máquina. Pode levar vários minutos."
+  }
+}

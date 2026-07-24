@@ -1,0 +1,39 @@
+{
+  "name": "jm-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H localhost -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^4.5.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.0",
+    "lucide-react": "^0.456.0",
+    "next": "^15.5.21",
+    "next-intl": "^4.13.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "^15.5.21",
+    "postcss": "8.5.23",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "0.35.3"
+  }
+}
