@@ -89,6 +89,19 @@ export default function Page() {
         )}
 
         <footer className="mt-16 text-center space-y-3">
+          {/* Rendered in both states: "seus gaps" reads as an intention before
+              the report exists and as a literal reference once it does. */}
+          <p className="text-sm text-fg-muted">
+            {t("ctaQuestion")}{" "}
+            <a
+              href={BRAND.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gradient font-medium hover:underline"
+            >
+              {t("ctaLink")}
+            </a>
+          </p>
           <p className="text-xs text-fg-faint space-x-3">
             <span>{BRAND.ownerLine}</span>
             <span aria-hidden="true">·</span>

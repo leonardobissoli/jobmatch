@@ -10,6 +10,8 @@
     "heroTitleHighlight": "this job",
     "heroTitleSuffix": "?",
     "heroSubtitle": "Get a fit analysis in under 5 minutes. Score 0–100, breakdown across 6 dimensions, prioritized gaps, and an action plan.",
+    "ctaQuestion": "Want help closing your gaps?",
+    "ctaLink": "Mentoring — send me a DM on LinkedIn",
     "footerPrivacy": "Privacy policy",
     "footerTerms": "Terms of use",
     "serverError": "Invalid response from server."
