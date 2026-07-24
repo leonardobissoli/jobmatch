@@ -109,6 +109,12 @@ npm run typecheck
 npm run build
 ```
 
+## Decisões de projeto
+
+Os comentários no código referenciam códigos `ADR-` e `SEC-`. O que cada um
+significa está em [docs/DECISIONS.md](docs/DECISIONS.md) — as camadas de defesa
+contra prompt injection, os limites de entrada e as escolhas de arquitetura.
+
 ## Licença
 
 MIT. Consulte [LICENSE](LICENSE).

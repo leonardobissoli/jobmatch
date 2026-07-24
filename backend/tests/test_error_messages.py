@@ -3,7 +3,7 @@
 Specific messages for benign causes (wrong file format, encrypted PDF,
 scanned PDF, etc.) — generic / opaque messages for security-sensitive
 rejections (regex injection hits). Tests below exercise the mapping
-without touching the ASGI stack or DB.
+without touching the ASGI stack.
 """
 from app.routes.match import (
     _CONTENT_VALIDATION_FALLBACK,
