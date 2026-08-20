@@ -119,4 +119,4 @@ contra prompt injection, os limites de entrada e as escolhas de arquitetura.
 
 MIT. Consulte [LICENSE](LICENSE).
 
-Leonardo Bissoli — Tech Hub
+Leonardo Bissoli. Tech Hub AI. 
